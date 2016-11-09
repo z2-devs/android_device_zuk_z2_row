@@ -1,10 +1,11 @@
+#
 # Copyright (C) 2016 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-#      http://www.apache.org/licenses/LICENSE-2.0
+# http://www.apache.org/licenses/LICENSE-2.0
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
@@ -12,18 +13,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit from those products. Most specific first.
+LOCAL_PATH := $(call my-dir)
 
-# Inherit Board Configration from Common Repo
-$(call inherit-product, device/zuk/z2_row/BoardConfig.mk)
+include $(CLEAR_VARS)
 
-# Assert Device
-TARGET_OTA_ASSERT_DEVICE := z2_row
+LOCAL_MODULE_TAGS := optional
+LOCAL_C_INCLUDES := system/core/init
+LOCAL_SRC_FILES := init_z2_row.cpp
+LOCAL_MODULE := libinit_z2-row
 
-# Init
-TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
-TARGET_INIT_VENDOR_LIB := libinit_z2_row
-TARGET_RECOVERY_DEVICE_MODULES := libinit_z2_row
-
-# Kernel
-TARGET_KERNEL_CONFIG := cyanogenmod_z2_row_defconfig
+include $(BUILD_STATIC_LIBRARY)
