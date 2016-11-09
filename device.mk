@@ -45,5 +45,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES := \
     $(DEVICE_PATH)/wifi/WCNSS_cfg.dat:system/etc/wifi/WCNSS_cfg.dat
 
+# Misc Configrations
+PRODUCT_COPY_FILES += $(DEVICE_PATH)/configs/whitelistedapps.xml:system/etc/whitelistedapps.xml
+
 # Inherit from z2_row vendor
 $(call inherit-product, vendor/zuk/z2_row/z2_row-vendor.mk)
