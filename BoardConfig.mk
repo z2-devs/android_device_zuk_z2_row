@@ -26,4 +26,4 @@ TARGET_INIT_VENDOR_LIB := libinit_z2_row
 TARGET_RECOVERY_DEVICE_MODULES := libinit_z2_row
 
 # Kernel
-TARGET_KERNEL_CONFIG := cyanogenmod_z2_row_defconfig
+TARGET_KERNEL_CONFIG := cyanogenmod_mustang_defconfig
