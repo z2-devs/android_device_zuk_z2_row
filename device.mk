@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+DEVICE_PATH := device/zuk/z2_row
+
 # Inherit from z2_row device
 $(call inherit-product, device/zuk/z2-common/z2-common.mk)
 
@@ -30,9 +32,18 @@ PRODUCT_COPY_FILES := \
     device/zuk/z2_row/configs/sec_config:system/etc/sec_config
 
 # Keylayout
+PRODUCT_PACKAGES += \
+    gpio-keys.kl \
+    qpnp_pon.kl \
+    synaptics_dsx.kl
+
+# Wifi
+PRODUCT_PACKAGES += \
+    wpa_supplicant_overlay.conf \
+    p2p_supplicant_overlay.conf
+
 PRODUCT_COPY_FILES := \
-    device/zuk/z2_row/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-    device/zuk/z2_row/keylayout/synaptics_dsx.kl:system/usr/keylayout/synaptics_dsx.kl \
+    $(DEVICE_PATH)/wifi/WCNSS_cfg.dat:system/etc/wifi/WCNSS_cfg.dat
 
 # Inherit from z2_row vendor
 $(call inherit-product, vendor/zuk/z2_row/z2_row-vendor.mk)
