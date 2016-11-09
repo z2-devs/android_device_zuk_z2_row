@@ -15,7 +15,7 @@
 # Inherit from those products. Most specific first.
 
 # Inherit Board Configration from Common Repo
-$(call inherit-product, device/zuk/z2-common/BoardConfig.mk)
+include device/zuk/z2-common/BoardConfig.mk
 
 # Assert Device
 TARGET_OTA_ASSERT_DEVICE := z2_row

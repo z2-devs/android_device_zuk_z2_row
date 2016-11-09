@@ -15,7 +15,7 @@
 DEVICE_PATH := device/zuk/z2_row
 
 # Inherit from z2_row device
-$(call inherit-product, device/zuk/z2-common/z2-common.mk)
+include device/zuk/z2-common/z2-common.mk
 
 # Audio
 PRODUCT_COPY_FILES := \
@@ -49,4 +49,4 @@ PRODUCT_COPY_FILES := \
 PRODUCT_COPY_FILES += $(DEVICE_PATH)/configs/whitelistedapps.xml:system/etc/whitelistedapps.xml
 
 # Inherit from z2_row vendor
-$(call inherit-product, vendor/zuk/z2_row/z2_row-vendor.mk)
+include vendor/zuk/z2_row/z2_row-vendor.mk
