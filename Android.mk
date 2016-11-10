@@ -29,5 +29,5 @@ ifneq ($(filter z2_row,$(TARGET_DEVICE)),)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 include $(call $(DEVICE_PATH)/AndroidBoard.mk)
 include $(call $(DEVICE_PATH)/keylayout/Android.mk)
-LOCAL_JACK_ENABLED := false
+include $(call $(DEVICE_PATH)/wifi/Android.mk)
 endif
