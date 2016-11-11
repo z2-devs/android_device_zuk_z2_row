@@ -15,7 +15,7 @@
 DEVICE_PATH := device/zuk/z2_row
 
 # Inherit from z2_row device
-include device/zuk/z2-common/z2-common.mk
+include device/zuk/z2-common/z2.mk
 
 # Audio
 PRODUCT_COPY_FILES := \
