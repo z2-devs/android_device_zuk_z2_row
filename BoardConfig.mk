@@ -24,4 +24,4 @@ TARGET_OTA_ASSERT_DEVICE := z2_row
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
 
 # Kernel
-TARGET_KERNEL_CONFIG := cyanogenmod_mustang_defconfig
+TARGET_KERNEL_CONFIG := cyanogenmod_z2121_defconfig
